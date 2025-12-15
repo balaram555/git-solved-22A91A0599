@@ -1,4 +1,4 @@
-# Application Configuration (Production + Development Support)
+# Application Configuration (Production)
 
 application:
   name: DevOpsSimulator
@@ -25,42 +25,7 @@ features:
   load_balancer: enabled
   backup_enabled: true
 
-# Optional Development Configuration
-development:
+# Experimental features (disabled by default)
+experimental:
   enabled: false
-  application:
-    version: 2.0.0-beta
-    environment: development
-
-  server:
-    host: localhost
-    port: 3000
-    ssl_enabled: false
-    hot_reload: true
-
-  logging:
-    level: DEBUG
-    format: pretty
-    output: console
-    show_stack_trace: true
-
-  database:
-    host: localhost
-    port: 5432
-    name: devops_dev
-
-  features:
-    auto_scaling: false
-    load_balancer: disabled
-    backup_enabled: false
-    experimental_features: true
-
-  settings:
-    mock_external_apis: true
-    debug_mode: true
-    cors_enabled: true
-
-  notifications:
-    slack_webhook: "https://hooks.slack.com/services/XXX"
-    discord_webhook: "https://discord.com/api/webhooks/YYY"
-    email_alerts: false
+  description: "Features from conflict-simulator branch"
